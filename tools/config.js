@@ -90,7 +90,7 @@ const config = {
 
   postcss: [
     require('postcss-nested')(),
-    //require('postcss-cssnext')(),
+    require('cssnext')(),
     require('autoprefixer')(AUTOPREFIXER_BROWSERS)
   ]
 };
