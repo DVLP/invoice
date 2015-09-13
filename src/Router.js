@@ -9,7 +9,6 @@ import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
 import Invoice from './components/Invoice';
 import InvoiceES6 from './components/InvoiceES6';
-import showInvoice from './actions/showInvoice';
 
 const router = new Router(on => {
 
@@ -26,15 +25,7 @@ const router = new Router(on => {
 
   on('/invoice', async () => <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />);
 
-  on('/invoiceES6', {
-        path: '/',
-        method: 'get',
-        action: function (context, payload, done) {
-            context.executeAction(showInvoice, {}, done);
-        }
-    });
-  
-  //on('/invoiceES6', async () => <InvoiceES6 source="https://still-scrubland-9880.herokuapp.com/bill.json" />);
+  on('/invoiceES6', async () => <InvoiceES6 />);
 
   on('*', async (state) => {
     const content = await http.get(`/api/content?path=${state.path}`);

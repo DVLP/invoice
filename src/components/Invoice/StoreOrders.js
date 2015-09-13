@@ -21,9 +21,7 @@ var StoreOrders = React.createClass({
                     <td className="col-xs-1 text-right"><strong>Cost</strong></td>
                 </tr>
               </thead>
-              <tbody>
-                <ItemList data={this.props.data.rentals} />
-              </tbody>
+              <ItemList data={this.props.data.rentals} />
             </table>
             <table className="table table-condensed">
               <thead>
@@ -35,9 +33,7 @@ var StoreOrders = React.createClass({
                   <td className="col-xs-1 text-right"><strong>Cost</strong></td>
                 </tr>
               </thead>
-              <tbody>
-                <ItemList data={this.props.data.buyAndKeep} />
-              </tbody>
+              <ItemList data={this.props.data.buyAndKeep} />
               <tfoot>
                 <tr>
                   <td className="highrow text-right"><strong>Total</strong></td>

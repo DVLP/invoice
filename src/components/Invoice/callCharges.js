@@ -19,9 +19,7 @@ var CallCharges = React.createClass({
                 <th className="col-xs-1 text-right">Cost</th>
               </tr>
             </thead>
-            <tbody>
-              <CallsList data={this.props.data.calls} />
-            </tbody>
+            <CallsList data={this.props.data.calls} />
             <tbody>
               <tr>
                 <td className="highrow"></td>

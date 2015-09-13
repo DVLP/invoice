@@ -1,43 +1,27 @@
-import InvoiceDispatcher from '../dispatchers/InvoiceDispatcher';
-import {ActionTypes} from '../constants/ActionTypes';
+import alt from '../alt';
+import InvoiceActions from '../actions/InvoiceActions';
+import InvoiceSource from '../sources/InvoiceSource';
+import InvoiceES6 from '../components/InvoiceES6';
 
-let data = {
-    message: ''
-};
+class InvoiceStore {
+  constructor() {
+    this.state = { value: '' };
+    this.registerAsync(InvoiceSource);
 
-class InvoiceStore extends EventEmitter {
-
-  getState() {
-    return data;
+    this.bindListeners({
+      showInvoice: InvoiceActions.showInvoice
+    });
   }
 
-  emitChange() {
-    this.emit(ActionTypes.CHANGE);
+  onFetch() {
+    if (!this.getInstance().isLoading()) {
+      this.getInstance().fetchInvoice();
+    }
   }
 
-  addChangeListener(cb) {
-    this.on(ActionTypes.CHANGE, cb);
-  }
-
-  removeChangeListener(cb) {
-    this.removeListener(ActionTypes.CHANGE, cb);
+  showInvoice(result) {
+    this.setState({ data: result.data });
   }
 }
 
-let invoiceStore = new InvoiceStore();
-
-export default invoiceStore;
-
-invoiceStore.dispatchToken = InvoiceDispatcher.register((payload) => {
-    let action = payload.action;
-    switch(action.type) {
-        case ActionTypes.FETCHING:
-            data = action.data;
-            invoiceStore.emitChange();
-            break;
-        default:
-            break;
-    }
-});
-
-invoiceStore.emitChange();
+export default alt.createStore(InvoiceStore, 'InvoiceStore');

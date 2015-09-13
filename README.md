@@ -1,6 +1,22 @@
 ## Invoice - React & Flux template
 
-> [React Starter Kit]((github-windows://openRepo/https://github.com/kriasoft/react-starter-kit)) Template used
+### Ingredients
+* Yeoman template [React Starter Kit]((github-windows://openRepo/https://github.com/kriasoft/react-starter-kit))
+* React 14
+* Bootstrap
+* Postcss
+* alt for Flux
+
+### Invoice files - ES6 version
+* src/actions/InvoiceActions.js
+* src/components/InvoiceES6
+* src/sources/InvoiceSource.js
+* stc/stores/InvoiceStore.js
+
+### Invoice files - Minimal version with no Flux
+* src/components/Invoice
+* requires: React, jQuerty, Bootstrap
+* can be loaded anywhere in react with <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />
 
 ### How to build
 * Clone the repo

@@ -1,71 +1,60 @@
-'use strict';
-var React = require('react/addons');
+import React, { PropTypes, Component } from 'react'
 
-var CallCharges = React.createClass({
-  render: function() {
+class CallCharges extends Component {
+  render() {
     return (
-    /* jshint ignore:start */
-  	<div className="panel panel-default">
-      <div className="panel-heading">
+      <div>
         <h3>Call charges</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Duration</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <CallsList data={this.props.data.calls} />
+          <tfoot>
+            <tr>
+              <td></td>
+              <th>Total</th>
+              <td>{this.props.data.total}</td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
-      <div className="panel-body">
-        <div className="table-responsive">
-          <table className="table table-condensed">
-            <thead>
-              <tr>
-                <th className="col-xs-3">Number</th>
-                <th className="col-xs-8">Duration</th>
-                <th className="col-xs-1 text-right">Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <CallsList data={this.props.data.calls} />
-            </tbody>
-            <tbody>
-              <tr>
-                <td className="highrow"></td>
-                <th className="highrow text-right">Total</th>
-                <td className="highrow text-right">{this.props.data.total}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    /* jshint ignore:end */
-    );
+    )
   }
-});
+}
 
-var CallsList = React.createClass({
-  render: function() {
+class CallsList extends Component {
+  render() {
     if(this.props.data) {
-      var callNodes = this.props.data.map(function (call) {
+      var callNodes = this.props.data.map(call => {
         return (
           <tr>
             <td>{call.called}</td>
             <td>{call.duration}</td>
-            <td className="text-right">{call.cost}</td>
+            <td>{call.cost}</td>
           </tr>
-        );
-      });  
+        )
+      })  
     } else {
       var callNodes = function () {
         return (
           <tr>
             <td>No data</td>
           </tr>
-        );
-      };
+        )
+      }
     }
     
     return (
-      <tbody className="callsList">
+      <tbody>
         {callNodes}
       </tbody>
-    );
+    )
   }
-});
+}
 
-module.exports = CallCharges;
+module.exports = CallCharges
