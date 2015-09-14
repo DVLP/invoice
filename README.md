@@ -7,23 +7,30 @@
 * Postcss
 * alt for Flux
 
+### How to build and run
+* Clone this repo
+* make sure you have node 4.0.0
+* install Babel - npm install -g babel
+* npm install (ignore browser-sync errors)
+* npm start - which should open the website in localhost:3000
+* Two links in the upper right corner lead to 2 versions of the bill. "Invoice" is simple and is using bootstrap and "Invoice ES6" is more complex. Files belonging to each version are shown below. 
+
 ### Invoice files - ES6 version
 * src/actions/InvoiceActions.js
 * src/components/InvoiceES6
 * src/sources/InvoiceSource.js
 * stc/stores/InvoiceStore.js
+![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice2.png =400x)
 
 ### Invoice files - Minimal version with no Flux
-* src/components/Invoice
-* requires: React, jQuerty, Bootstrap
-* can be loaded anywhere in react with <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />
+* src/components/Invoice - files from this location can be copied to any other react project. This version requires bootstrap to be displayed correctly 
+* to display this version use
+```HTML
+<Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />
+```
+![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice2.png =400x)
 
-### How to build
-* Clone the repo
-* npm install
-* npm start
-
-## From template's repo:
+## Readme from template's original repo:
 ### Directory Layout
 
 ```
