@@ -20,7 +20,7 @@
 * src/components/InvoiceES6
 * src/sources/InvoiceSource.js
 * stc/stores/InvoiceStore.js
-![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice2.png =400x)
+![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice2.png)
 
 ### Invoice files - Minimal version with no Flux
 * src/components/Invoice - files from this location can be copied to any other react project. This version requires bootstrap to be displayed correctly 
@@ -28,7 +28,7 @@
 ```HTML
 <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />
 ```
-![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice2.png =400x)
+![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice1.png)
 
 ## Readme from template's original repo:
 ### Directory Layout
