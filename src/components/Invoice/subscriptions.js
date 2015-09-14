@@ -10,24 +10,22 @@ var Subscriptions = React.createClass({
         <h3><strong>Subscriptions</strong></h3>
       </div>
       <div className="panel-body">
-        <div className="table-responsive">
-          <table className="table table-condensed">
-            <thead>
-              <tr>
-                <td className="col-xs-1"><strong>Type</strong></td>
-                <td className="col-xs-10"><strong>Service name</strong></td>
-                <td className="col-xs-1 text-right"><strong>Cost</strong></td>
-              </tr>
-            </thead>
-            <SubscriptionList data={this.props.data.subscriptions} />
-            <tbody>
-              <tr>
-                <td colSpan="2" className="highrow text-right"><strong>Total</strong></td>
-                <td className="highrow text-right">{this.props.data.total}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table className="table table-condensed">
+          <thead>
+            <tr>
+              <td className="col-xs-1"><strong>Type</strong></td>
+              <td className="col-xs-10"><strong>Service name</strong></td>
+              <td className="col-xs-1 text-right"><strong>Cost</strong></td>
+            </tr>
+          </thead>
+          <SubscriptionList data={this.props.data.subscriptions} />
+          <tbody>
+            <tr>
+              <td colSpan="2" className="highrow text-right"><strong>Total</strong></td>
+              <td className="highrow text-right">{this.props.data.total}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     /* jshint ignore:end */

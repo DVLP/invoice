@@ -9,20 +9,20 @@ class Subscriptions extends Component {
 
     return (
       <div>
-        <h3>Subscriptions</h3>
-        <table>
+        <h2>Subscriptions</h2>
+        <table className="subscriptionsTable">
           <thead>
-            <tr>
-              <td>{subscriptionType}</td>
-              <td>{serviceName}</td>
-              <td>{cost}</td>
+            <tr className="rowSubscription">
+              <th className="cellSubType">{subscriptionType}</th>
+              <th className="cellSubName">{serviceName}</th>
+              <th className="costColumn">{cost}</th>
             </tr>
           </thead>
           <SubscriptionList data={this.props.data.subscriptions} />
           <tbody>
             <tr>
-              <td colSpan="2">{total}</td>
-              <td>{this.props.data.total}</td>
+              <td className="totalCaption" colSpan="2">{total}</td>
+              <td className="totalValue">{this.props.data.total}</td>
             </tr>
           </tbody>
         </table>
@@ -36,7 +36,7 @@ class SubscriptionList extends Component {
     if(this.props.data) {
       var subscriptionNodes = this.props.data.map(subscription => {
         return (
-          <tr>
+          <tr className="rowSubscription">
             <td>{subscription.type}</td>
             <td>{subscription.name}</td>
             <td>{subscription.cost}</td>

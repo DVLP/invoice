@@ -5,20 +5,19 @@ class CallCharges extends Component {
     return (
       <div>
         <h3>Call charges</h3>
-        <table>
+        <table className="callChargesTable">
           <thead>
             <tr>
-              <th>Number</th>
-              <th>Duration</th>
-              <th>Cost</th>
+              <th className="cellCallNumber">Number</th>
+              <th className="cellCallDuration">Duration</th>
+              <th className="costColumn">Cost</th>
             </tr>
           </thead>
           <CallsList data={this.props.data.calls} />
           <tfoot>
             <tr>
-              <td></td>
-              <th>Total</th>
-              <td>{this.props.data.total}</td>
+              <td className="totalCaption" colSpan="2">Total</td>
+              <td className="totalValue">{this.props.data.total}</td>
             </tr>
           </tfoot>
         </table>
@@ -32,13 +31,13 @@ class CallsList extends Component {
     if(this.props.data) {
       var callNodes = this.props.data.map(call => {
         return (
-          <tr>
+          <tr className="rowCall">
             <td>{call.called}</td>
             <td>{call.duration}</td>
             <td>{call.cost}</td>
           </tr>
         )
-      })  
+      })
     } else {
       var callNodes = function () {
         return (
@@ -48,7 +47,7 @@ class CallsList extends Component {
         )
       }
     }
-    
+
     return (
       <tbody>
         {callNodes}

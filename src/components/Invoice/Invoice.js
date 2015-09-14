@@ -47,11 +47,11 @@ var Invoice = React.createClass({
 
   render: function() {
     return (
-      <div className="invoice">
+      <div className="container invoice">
         <div className="row">
           <div className="col-xs-12">
             <div className="header">
-              <h1>Invoice</h1>
+              <h1><strong>Invoice</strong></h1>
             </div>
             <div className="row">
               <div className="col-xs-12 col-md-4 col-lg-4 pull-left">

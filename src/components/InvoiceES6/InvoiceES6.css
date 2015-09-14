@@ -1,12 +1,107 @@
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 @import '../variables.css';
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
 
 .invoice {
   margin: 0 auto;
-  padding: 0 0 40px;
   max-width: var(--max-content-width);
-}
-h1 {
-    font-size: 5.9vw;
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
   }
+  h2 {
+    font-size: 1.5rem;
+    clear: both;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  dl {
+    clear: both;
+    margin-bottom: 2em;
+  }
+  dt {
+    clear: left;
+    float: left;
+    width: 20%;
+  }
+  dd {
+    float: right;
+  }
+  table {
+    width: 100%;
+    margin: 1em 0;
+  }
+  th {
+    font-weight: bold;
+  }
+  th, td {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  .costColumn {
+    width: 20%;
+    text-align: right;
+  }
+  .cellCallNumber {
+    width: 30%;
+  }
+  .cellCallDuration {
+    width: 50%;
+  }
+  .cellSubType {
+    width: 20%;
+  }
+  .cellSubName {
+    width: 60%;
+  }
+  .callChargesTable tr td:nth-child(3) {
+    text-align: right;
+  }
+  .subscriptionsTable tr td:nth-child(3) {
+    text-align: right;
+  }
+  .storeOrdersTable tr td:nth-child(2) {
+    text-align: right;
+  }
+  .totalCaption {
+    text-align: right;
+    font-weight: bold;
+    border-bottom: none;
+  }
+  .totalValue {
+    text-align: right;
+    border-bottom: none;
+  }
+
+  .total {
+    border-bottom: 1px solid #eee;
+    .totalValue {
+      float: right;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .invoice {
+    th, td {
+      padding: 15px;
+    }
+    h1 {
+      margin-top: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    dd {
+      float: left;
+    }
+  }
+}

@@ -40,10 +40,10 @@ class InvoiceES6 extends Component {
       )
     }
     return (
-      <div className="invoice">
+      <div className="container invoice">
         <h1>{invoice}</h1>
         <h2>{date}</h2>
-        <dl>
+        <dl className="clearfix">
           <dt>{date}:</dt>
           <dd>
             <Time value={this.props.data.statement.generated} format="DD / MM / YYYY" />
@@ -54,7 +54,7 @@ class InvoiceES6 extends Component {
           </dd>
         </dl>
         <h2>{period}</h2>
-        <dl>
+        <dl className="clearfix">
           <dt>{dateFrom}:</dt>
           <dd>
             <Time value={this.props.data.statement.period.from} format="DD / MM / YYYY" />
@@ -64,8 +64,9 @@ class InvoiceES6 extends Component {
             <Time value={this.props.data.statement.period.to} format="DD / MM / YYYY" />
           </dd>
         </dl>
-        <h2>{total}
-          <span>{this.props.data.total}</span>
+        <h2 className="total">
+          <span>{total}</span>
+          <span className="totalValue">{this.props.data.total}</span>
         </h2>
         <Subscriptions data={this.props.data.package} />
         <CallCharges data={this.props.data.callCharges} />

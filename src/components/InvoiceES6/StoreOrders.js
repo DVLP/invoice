@@ -2,36 +2,43 @@ import React, { PropTypes, Component } from 'react'
 
 class StoreOrders extends Component {
   render() {
+    let skyStore = 'Sky store'
+    let rentals = 'Rentals'
+    let title = 'Title'
+    let total = 'Total'
+    let cost = 'Cost'
+    let buyAndKeep = 'Buy And Keep'
+    let nodata = 'No data'
     return (
     <div>
-      <h3>Sky store</h3>
-      <table>
+      <h3>{skyStore}</h3>
+      <table className="storeOrdersTable">
         <thead>
           <tr>
-            <td colSpan="2"><h4>Rentals</h4></td>
+            <td colSpan="2"><h4>{rentals}</h4></td>
           </tr>
           <tr>
-              <td>Title</td>
-              <td>Cost</td>
+              <th>{title}</th>
+              <th className="costColumn">{cost}</th>
           </tr>
         </thead>
         <ItemList data={this.props.data.rentals} />
       </table>
-      <table>
+      <table className="storeOrdersTable">
         <thead>
           <tr>
-            <td colSpan="2"><h4>Buy And Keep</h4></td>
+            <td colSpan="2"><h4>{buyAndKeep}</h4></td>
           </tr>
           <tr>
-            <td>Title</td>
-            <td>Cost</td>
+            <th>{title}</th>
+            <th className="costColumn">{cost}</th>
           </tr>
         </thead>
         <ItemList data={this.props.data.buyAndKeep} />
         <tfoot>
           <tr>
-            <td>Total</td>
-            <td>{this.props.data.total}</td>
+            <td className="totalCaption">{total}</td>
+            <td className="totalValue">{this.props.data.total}</td>
           </tr>
         </tfoot>
       </table>
@@ -47,7 +54,7 @@ class ItemList extends Component {
         return (
           <tr>
             <td>{item.title}</td>
-            <td className="text-right">{item.cost}</td>
+            <td>{item.cost}</td>
           </tr>
         )
       })
@@ -55,14 +62,14 @@ class ItemList extends Component {
       var nodes = function () {
         return (
           <tr>
-            <td>No data</td>
+            <td>{nodata}</td>
           </tr>
         )
       }
     }
     
     return (
-      <tbody className="ItemList">
+      <tbody>
         {nodes}
       </tbody>
     )

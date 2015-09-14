@@ -80,7 +80,7 @@ const config = {
       test: /\.txt$/,
       loader: 'raw-loader'
     }, {
-      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+      test: /\.(png|jpg|jpeg|gif|svg|woff|ttf|woff2)$/,
       loader: 'url-loader?limit=10000'
     }, {
       test: /\.(eot|tft|wav|mp3)$/,
@@ -89,7 +89,7 @@ const config = {
   },
 
   postcss: [
-    require('postcss-nested')(),
+    require('postcss-nested'),
     require('cssnext')(),
     require('autoprefixer')(AUTOPREFIXER_BROWSERS)
   ]

@@ -15,8 +15,8 @@ class Header extends Component {
         <div className="Header-container">
           <Navigation className="Header-nav" />
           <div className="Header-banner">
-            <h1 className="Header-bannerTitle">Sky</h1>
-            <p className="Header-bannerDesc">Sending you bills every day</p>
+            <h1 className="Header-bannerTitle">React</h1>
+            <p className="Header-bannerDesc">Now</p>
           </div>
         </div>
       </div>

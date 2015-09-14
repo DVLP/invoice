@@ -7,28 +7,26 @@ var CallCharges = React.createClass({
     /* jshint ignore:start */
   	<div className="panel panel-default">
       <div className="panel-heading">
-        <h3>Call charges</h3>
+        <h3><strong>Call charges</strong></h3>
       </div>
       <div className="panel-body">
-        <div className="table-responsive">
-          <table className="table table-condensed">
-            <thead>
-              <tr>
-                <th className="col-xs-3">Number</th>
-                <th className="col-xs-8">Duration</th>
-                <th className="col-xs-1 text-right">Cost</th>
-              </tr>
-            </thead>
-            <CallsList data={this.props.data.calls} />
-            <tbody>
-              <tr>
-                <td className="highrow"></td>
-                <th className="highrow text-right">Total</th>
-                <td className="highrow text-right">{this.props.data.total}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table className="table table-condensed">
+          <thead>
+            <tr>
+              <th className="col-xs-3">Number</th>
+              <th className="col-xs-8">Duration</th>
+              <th className="col-xs-1 text-right">Cost</th>
+            </tr>
+          </thead>
+          <CallsList data={this.props.data.calls} />
+          <tbody>
+            <tr>
+              <td className="highrow"></td>
+              <th className="highrow text-right">Total</th>
+              <td className="highrow text-right">{this.props.data.total}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     /* jshint ignore:end */
