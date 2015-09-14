@@ -1,4 +1,3 @@
-'use strict';
 var React = require('react/addons');
 
 var StoreOrders = React.createClass({

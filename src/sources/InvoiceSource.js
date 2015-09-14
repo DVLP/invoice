@@ -3,9 +3,8 @@ import axios from 'axios'
 
 const InvoiceSource = {
   fetchInvoice: {
-  	
     remote(state) {
-   		return axios.get(`https://still-scrubland-9880.herokuapp.com/bill.json?id={state.value}`)
+      return axios.get(`https://still-scrubland-9880.herokuapp.com/bill.json?id={state.value}`)
     },
 
     loading: InvoiceActions.loadingInvoice,

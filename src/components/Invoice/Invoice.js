@@ -1,4 +1,3 @@
-'use strict';
 var React = require('react/addons');
 var Subscriptions = require('./Subscriptions');
 var CallCharges = require('./CallCharges');
