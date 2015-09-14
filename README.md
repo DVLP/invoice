@@ -1,20 +1,5 @@
 ## Invoice - React & Flux template
 
-### Ingredients
-* Yeoman template [React Starter Kit]((github-windows://openRepo/https://github.com/kriasoft/react-starter-kit))
-* React 14
-* Bootstrap
-* Postcss
-* alt for Flux
-
-### How to build and run
-* Clone this repo
-* make sure you have node 4.0.0
-* install Babel - npm install -g babel
-* npm install (ignore browser-sync errors)
-* npm start - which should open the website in localhost:3000
-* Two links in the upper right corner lead to 2 versions of the bill. "Invoice" is simple and is using bootstrap and "Invoice ES6" is more complex. Files belonging to each version are shown below. 
-
 ### Invoice files - ES6 version
 * src/actions/InvoiceActions.js
 * src/components/InvoiceES6
@@ -30,6 +15,22 @@
 <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />
 ```
 ![](https://raw.githubusercontent.com/DVLP/invoice/master/screenshots/invoice1.png)
+
+### How to build and run this project
+* Clone this repo
+* make sure you have node 4.0.0
+* install Babel - npm install -g babel
+* npm install (ignore browser-sync errors)
+* npm start - which should open the website in localhost:3000
+* Two links in the upper right corner lead to 2 versions of the bill. "Invoice" is simple and is using bootstrap and "Invoice ES6" is more complex. Files belonging to each version are shown below. 
+
+### Ingredients
+* Yeoman react-fullstack template 
+[React Starter Kit]((github-windows://openRepo/https://github.com/kriasoft/react-starter-kit))
+* React 14
+* Bootstrap
+* Postcss
+* alt for Flux
 
 ## Readme from template's original repo:
 ### Directory Layout
