@@ -1,0 +1,6 @@
+{
+  "name": "Currency",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./Currency.js"
+}

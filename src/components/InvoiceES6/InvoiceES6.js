@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import Subscriptions from './Subscriptions'
+import Currency from '../Currency'
 import CallCharges from './CallCharges'
 import StoreOrders from './StoreOrders'
 import connectToStores from 'alt/utils/connectToStores'
@@ -66,7 +67,7 @@ class InvoiceES6 extends Component {
         </dl>
         <h2 className="total">
           <span>{total}</span>
-          <span className="totalValue">{this.props.data.total}</span>
+          <Currency className="totalValue" currency="GBP" value={this.props.data.total} />
         </h2>
         <Subscriptions data={this.props.data.package} />
         <CallCharges data={this.props.data.callCharges} />

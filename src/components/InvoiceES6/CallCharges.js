@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react'
+import Currency from '../Currency'
 
 class CallCharges extends Component {
   render() {
@@ -17,7 +18,7 @@ class CallCharges extends Component {
           <tfoot>
             <tr>
               <td className="totalCaption" colSpan="2">Total</td>
-              <td className="totalValue">{this.props.data.total}</td>
+              <td className="totalValue"><Currency currency="GBP" value={this.props.data.total} /></td>
             </tr>
           </tfoot>
         </table>
@@ -34,7 +35,7 @@ class CallsList extends Component {
           <tr className="rowCall">
             <td>{call.called}</td>
             <td>{call.duration}</td>
-            <td>{call.cost}</td>
+            <td><Currency value={call.cost} /></td>
           </tr>
         )
       })
