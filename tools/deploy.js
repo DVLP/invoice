@@ -19,20 +19,20 @@ export default () => new Promise((resolve, reject) => {
   if (process.argv.includes('production')) {
     remote = {
       name: 'production',
-      url: 'https://example.scm.azurewebsites.net/example.git',
-      branch: 'master'
+      url: 'https://github.com/DVLP/invoice.git',
+      branch: 'gh-pages'
     };
   } else if (process.argv.includes('staging')) {
     remote = {
       name: 'staging',
-      url: 'https://example-staging.scm.azurewebsites.net/example.git',
-      branch: 'master'
+      url: 'https://github.com/DVLP/invoice.git',
+      branch: 'gh-pages'
     };
   } else {
     remote = {
       name: 'test',
-      url: 'https://example-test.scm.azurewebsites.net/example.git',
-      branch: 'master'
+      url: 'https://github.com/DVLP/invoice.git',
+      branch: 'gh-pages'
     };
   }
 
