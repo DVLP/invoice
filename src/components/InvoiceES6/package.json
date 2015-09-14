@@ -1,0 +1,6 @@
+{
+  "name": "InvoiceES6",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./InvoiceES6.js"
+}
