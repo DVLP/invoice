@@ -7,7 +7,6 @@ import App from './components/App';
 import ContentPage from './components/ContentPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
-import Invoice from './components/Invoice';
 import InvoiceES6 from './components/InvoiceES6';
 
 const router = new Router(on => {
@@ -23,9 +22,7 @@ const router = new Router(on => {
 
   on('/register', async () => <RegisterPage />);
 
-  on('/invoice', async () => <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />);
-
-  on('/invoiceES6', async () => <InvoiceES6 />);
+  on('/invoice', async () => <InvoiceES6 />);
 
   on('*', async (state) => {
     const content = await http.get(`/api/content?path=${state.path}`);
