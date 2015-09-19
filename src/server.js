@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import express from 'express';
 import ReactDOM from 'react-dom/server';
-import Router from './Router';
+import Router from './routes';
 
 const server = global.server = express();
 
@@ -55,9 +55,9 @@ server.get('*', async (req, res, next) => {
 // -----------------------------------------------------------------------------
 
 server.listen(server.get('port'), () => {
+  /* eslint-disable no-console */
+  console.log('The server is running at http://localhost:' + server.get('port'));
   if (process.send) {
     process.send('online');
-  } else {
-    console.log('The server is running at http://localhost:' + server.get('port'));
   }
 });
