@@ -23,6 +23,10 @@ const router = new Router(on => {
 
   on('/register', async () => <RegisterPage />);
 
+  on('/invoice', async () => <Invoice source="https://still-scrubland-9880.herokuapp.com/bill.json" />);
+
+  on('/invoiceES6', async () => <InvoiceES6 />);
+
   on('*', async (state) => {
     const content = await http.get(`/api/content?path=${state.path}`);
     return content && <ContentPage {...content} />;
